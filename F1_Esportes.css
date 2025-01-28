@@ -1,0 +1,129 @@
+/* Estilo Geral */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+header {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #ff0000;
+}
+
+/* Conteúdo Principal */
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+section {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.noticia {
+    margin-bottom: 20px;
+}
+
+.noticia h2 {
+    font-size: 22px;
+    color: #ff0000;
+    margin-bottom: 10px;
+}
+
+.noticia p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Rodapé */
+footer {
+    background-color: #15151E;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Estilo Específico para Links das Páginas */
+.page-link {
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    margin: 15px auto;
+    padding: 10px 20px;
+    background-color: #ff0000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    width: 200px;
+    transition: background-color 0.3s;
+}
+
+.page-link:hover {
+    background-color: #cc0000;
+}
+.sponsors {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.sponsors div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+.sponsors img {
+    max-width: 100px; /* Ajusta o tamanho conforme necessário */
+    height: auto;
+}

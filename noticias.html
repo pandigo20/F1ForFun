@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notícias - Fórmula 1</title>
+    <link rel="stylesheet" href="Noticias.css">
+    <link rel="javascript" href="java_script_noticias.js">
+    <script src="load_components.js" defer></script>
+
+</head>
+<body>
+    <div id="navbar"></div>
+    <main>
+        <section>
+            <h1>Todas as Notícias</h1>
+            <div id="news-container">
+                <div class="noticia">
+                    <h2>Max Verstappen conquista o título mundial pela terceira vez</h2>
+                    <img src="https://hojemacau.com.mo/wp-content/uploads/2022/10/max-verstappen-bicampeao-da-f1-comemora-sua-vitoria-no-gp-do-japao-1665304977184_v2_900x506.jpg" alt="Max Verstappen celebra o título" class="noticia-img">
+                    <p>O piloto da Red Bull, Max Verstappen, sagrou-se campeão mundial pela terceira vez consecutiva...</p>
+                    <div class="mais-info" style="display: none;">
+                        <p>Max Verstappen dominou a temporada com um desempenho impressionante...</p>
+                        <p><strong>Data:</strong> 25 de Setembro de 2025</p>
+                    </div>
+                    <button class="saber-mais" onclick="mostrarMais(this)">Saber mais</button>
+                </div>
+                <div class="noticia">
+                    <h2>Liam Lawson impressiona ao garantir pódio na estreia</h2>
+                    <img src="https://cdn-images.rtp.pt/icm/noticias/images/92/92905040b575642b4ea880affadf7898?w=860&q=90&rect=0,109,972,533" alt="Liam Lawson no pódio" class="noticia-img">
+                    <p>No Grande Prémio de Singapura, o jovem piloto da Red Bull, Liam Lawson, conquistou um inesperado terceiro lugar...</p>
+                    <div class="mais-info" style="display: none;">
+                        <p>Lawson demonstrou maturidade e habilidade...</p>
+                        <p><strong>Data:</strong> 17 de Setembro de 2025</p>
+                    </div>
+                    <button class="saber-mais" onclick="mostrarMais(this)">Saber mais</button>
+                </div>
+                <div class="noticia">
+                    <h2>Ferrari anuncia renovação com Charles Leclerc e Lewis Hamilton</h2>
+                    <img src="https://th.bing.com/th/id/OIP.reYkBFJUM80dntAgvHC8FwHaE7?rs=1&pid=ImgDetMain" alt="Charles Leclerc e Lewis Hamilton" class="noticia-img">
+                    <p>A Ferrari confirmou que Charles Leclerc e Lewis Hamilton continuarão a competir pela equipa...</p>
+                    <div class="mais-info" style="display: none;">
+                        <p>A dupla mostrou-se otimista para as próximas temporadas...</p>
+                        <p><strong>Data:</strong> 5 de Outubro de 2025</p>
+                    </div>
+                    <button class="saber-mais" onclick="mostrarMais(this)">Saber mais</button>
+                </div>
+                <div class="noticia">
+                    <h2>Andrea Kimi Antonelli promovido a piloto titular da Mercedes</h2>
+                    <img src="https://th.bing.com/th?id=OIF.PvgnsHz8z%2fFrYB9PxxyyDA&w=199&h=180&c=7&r=0&o=5&pid=1.7" alt="Andrea Kimi Antonelli com uniforme da Mercedes" class="noticia-img">
+                    <p>A Mercedes revelou que Andrea Kimi Antonelli será o novo piloto titular da equipa a partir de 2026...</p>
+                    <div class="mais-info" style="display: none;">
+                        <p>Antonelli, que brilhou na Fórmula 2, será companheiro de George Russell...</p>
+                        <p><strong>Data:</strong> 12 de Novembro de 2025</p>
+                    </div>
+                    <button class="saber-mais" onclick="mostrarMais(this)">Saber mais</button>
+                </div>
+                <div class="noticia">
+                    <h2>McLaren revela novo carro para a temporada de 2026</h2>
+                    <img src="https://mclaren.bloomreach.io/delivery/resources/content/gallery/mclaren-racing/formula-1/2024/whatever-it-takes/web/2024-f1-livery-launch-fb-cover.jpg" alt="Novo carro da McLaren para 2026"class="noticia-img">
+                    <p>A McLaren apresentou o seu novo monolugar, projetado para competir com as equipas de topo...</p>
+                    <div class="mais-info" style="display: none;">
+                        <p>Lando Norris e Oscar Piastri testaram o carro no circuito de Silverstone...</p>
+                        <p><strong>Data:</strong> 20 de Dezembro de 2025</p>
+                    </div>
+                    <button class="saber-mais" onclick="mostrarMais(this)">Saber mais</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="rodape">
+        <footer>
+            <p>&copy; 2025 F1ForFun. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+    
+
+
+    <script>
+        function mostrarMais(button) {
+            const maisInfo = button.previousElementSibling;
+            if (maisInfo.style.display === "none") {
+                maisInfo.style.display = "block";
+                button.textContent = "Mostrar menos";
+            } else {
+                maisInfo.style.display = "none";
+                button.textContent = "Saber mais";
+            }
+        }
+    </script>
+</body>
+
+</html>

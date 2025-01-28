@@ -1,0 +1,48 @@
+/* Ajustar estilos gerais do body */
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; /* O corpo ocupa a altura da tela */
+    display: flex;
+    flex-direction: column; /* Alinha os elementos em coluna */
+}
+
+/* O conteúdo principal deve crescer para empurrar o rodapé */
+main {
+    flex: 1; /* Faz com que o conteúdo ocupe o espaço restante */
+    padding: 20px;
+}
+
+/* Estilo para o rodapé */
+footer {
+    background-color: #15151E;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Patrocinadores */
+.sponsors {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.sponsors img {
+    max-width: 100px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.sponsors img:hover {
+    transform: scale(1.1);
+}

@@ -1,0 +1,62 @@
+/* Tornar o header fixo no topo */
+header.navbar-header {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Adicionar margem ao corpo para compensar a altura do header fixo */
+body.navbar-page {
+    padding-top: 60px; /* Ajustar conforme a altura do header */
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+}
+
+/* Estilo da Logo */
+header.navbar-header .logo {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    gap: 10px;
+}
+
+header.navbar-header .logo img {
+    height: 50px;
+    width: auto;
+}
+
+/* Estilo da navegação */
+header.navbar-header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding-right: 15px;
+}
+
+header.navbar-header nav ul li {
+    margin: 0 15px;
+}
+
+header.navbar-header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+header.navbar-header nav ul li a:hover,
+header.navbar-header nav ul li a.active {
+    color: #e10600; /* Cor de destaque */
+}

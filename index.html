@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fórmula 1 - Informações e Funcionalidades</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="javascript" href="JAVA_Index.js">
+    <script src="load_components.js" defer></script>
+    <style>
+        /* Estilos gerais para a página */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        main {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        /* Estilos para a secção das notícias */
+        #noticias {
+            width: 60%;
+        }
+
+        #noticias h2 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+
+        .noticia {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #f4f4f4;
+            border-radius: 5px;
+        }
+
+        .noticia h3 {
+            font-size: 1.2em;
+        }
+
+        .noticia p {
+            font-size: 1em;
+            color: #555;
+        }
+
+        /* Estilos para a secção da Rolex e tempo restante para o próximo GP */
+        #rolex-tempo {
+            width: 35%;
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            border-radius: 10px;
+        }
+
+        #rolex-tempo img {
+            width: 80%;
+            max-width: 200px;
+            margin-bottom: 20px;
+        }
+
+        #tempo-restante {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        /* Estilos para a secção da pista (dentro da área do Rolex e tempo) */
+        #pista-info {
+            margin-top: 20px;
+            font-size: 1.1em;
+        }
+
+        #pista-info p {
+            margin: 10px 0;
+        }
+
+        /* Ajuste do layout dentro do quadrado do Rolex e tempo */
+        .pista-info {
+            font-size: 1em;
+            margin-top: 15px;
+            background-color: #444;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="navbar"></div>
+
+    <main>
+        <!-- Secção de Notícias -->
+        <section id="noticias">
+            <h2>Últimas Notícias</h2>
+            <div class="noticia">
+                <h3>Verstappen conquista vitória no GP da Austrália</h3>
+                <p>Max Verstappen, piloto da Red Bull, começou a temporada com uma vitória dominante no Circuito de Melbourne.</p>
+            </div>
+            <div class="noticia">
+                <h3>Mercedes apresenta melhorias significativas</h3>
+                <p>A equipa Mercedes mostrou grande evolução no desempenho após introduzir um pacote de atualizações aerodinâmicas.</p>
+            </div>
+            <div class="noticia">
+                <h3>Calendário 2025 traz novidades</h3>
+                <p>Com a inclusão de novos circuitos, a temporada de 2025 promete emoções renovadas para os fãs de Fórmula 1.</p>
+            </div>
+        </section>
+        
+
+        
+            <!-- Informações da Pista dentro do mesmo espaço -->
+            <div class="pista-info">
+                <section id="tagheur">
+            
+                    <p>Tempo restante até ao próximo Grande Prémio:</p>
+                    <div id="tempo-restante"></div>
+                <h3>Informações sobre a Pista: Circuito de Melbourne</h3>
+                <img src="./Site/tag_heur_pista-removebg-preview.png" alt="Logo tagheur">
+                 <img src="./Site/mel-removebg-preview.png">
+                <p><strong>Nome da Pista:</strong> Circuito de Melbourne (Albert Park Circuit)</p>
+                <p><strong>Comprimento:</strong> 5.303 km</p>
+                <p><strong>Número de Curvas:</strong> 16</p>
+                <p><strong>Número de Voltas:</strong> 58</p>
+                <p><strong>Último Vencedor:</strong> Max Verstappen (2024)</p> <!-- Atualiza com o vencedor mais recente -->
+            </div>
+        </section>
+    </main>
+
+    <div id="rodape">
+        <footer>
+            <p>&copy; 2025 F1ForFun. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+    
+    
+
+    <script>
+        // Calcular o tempo até o próximo Grande Prémio
+        const proximoGP = new Date("2025-03-23T12:00:00Z"); // Data do próximo GP (ajusta a data conforme necessário)
+        
+        function atualizarTempoRestante() {
+            const agora = new Date();
+            const tempoRestante = proximoGP - agora;
+            
+            if (tempoRestante > 0) {
+                const dias = Math.floor(tempoRestante / (1000 * 60 * 60 * 24));
+                const horas = Math.floor((tempoRestante % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutos = Math.floor((tempoRestante % (1000 * 60 * 60)) / (1000 * 60));
+
+                document.getElementById("tempo-restante").innerText = `${dias}d ${horas}h ${minutos}m`;
+            } else {
+                document.getElementById("tempo-restante").innerText = "O Grande Prémio já começou!";
+            }
+        }
+
+        // Atualizar o tempo restante a cada minuto
+        setInterval(atualizarTempoRestante, 60000);
+        atualizarTempoRestante();
+    </script>
+</body>
+
+</html>

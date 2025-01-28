@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background-color: #121212;
+}
+
+
+#hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: url('https://via.placeholder.com/1920x600') no-repeat center center/cover;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+section {
+    padding: 40px 20px;
+}
+
+section h2 {
+    margin-bottom: 20px;
+    border-bottom: 2px solid #e10600;
+    display: inline-block;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #15151E;
+    color: #ffffff;
+}
+
+#noticias {
+    width: 60%;
+    margin-right: 20px;
+}
+
+#noticias h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+.noticia {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.noticia h3 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.noticia p {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.5;
+}
+.sponsors {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.sponsors div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+.sponsors img {
+    max-width: 100px; /* Ajusta o tamanho conforme necessário */
+    height: auto;
+}
