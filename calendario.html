@@ -168,14 +168,14 @@
 
 
         <section id="mapa">
-                <h2>Mapa Interativo dos Circuitos</h2>
-                <div id="mapa-circuitos" style="height: 400px; width: 100%;"></div>
-        </section>
+    <h2>Mapa Interativo dos Circuitos</h2>
+    <div id="mapa-circuitos" style="height: 400px; width: 100%;"></div>
+</section>
 
-        <script src="https://cdn.jsdelivr.net/npm/leaflet/dist/leaflet.js"></script>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet/dist/leaflet.css" />
+<script src="https://cdn.jsdelivr.net/npm/leaflet/dist/leaflet.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet/dist/leaflet.css" />
 
-       <script>
+<script>
     const mapa = L.map("mapa-circuitos").setView([20, 0], 2);
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png").addTo(mapa);
 
@@ -205,9 +205,15 @@
     circuitos.forEach(circuito => {
         L.marker(circuito.coordenadas)
             .addTo(mapa)
-            .bindPopup(`<strong>${circuito.nome}</strong><br>${circuito.pais}<br>${circuito.info || ""}`);
+            .bindPopup(`
+                <strong>${circuito.nome}</strong><br>
+                ${circuito.pais}<br>
+                ${circuito.info || ""}<br>
+                <strong>Localização:</strong><br>Latitude: ${circuito.coordenadas[0]}<br>Longitude: ${circuito.coordenadas[1]}
+            `);
     });
 </script>
+
 
 
 
