@@ -175,7 +175,7 @@
         <script src="https://cdn.jsdelivr.net/npm/leaflet/dist/leaflet.js"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet/dist/leaflet.css" />
 
-        <script>
+       <script>
     const mapa = L.map("mapa-circuitos").setView([20, 0], 2);
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png").addTo(mapa);
 
@@ -208,6 +208,7 @@
             .bindPopup(`<strong>${circuito.nome}</strong><br>${circuito.pais}<br>${circuito.info || ""}`);
     });
 </script>
+
 
 
 
