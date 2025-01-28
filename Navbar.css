@@ -60,26 +60,52 @@ header.navbar-header nav ul li a:hover,
 header.navbar-header nav ul li a.active {
     color: #e10600; /* Cor de destaque */
 }
+/* Estilos básicos da navbar */
+.navbar {
+  background-color: #333;
+  overflow: hidden;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar li {
+  margin: 0 10px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+  border-radius: 5px;
+}
+
+.navbar a:hover {
+  background-color: #555;
+}
+
+/* Responsividade para tablets */
 @media (max-width: 768px) {
   .navbar ul {
-    padding: 0;
-    text-align: left;
+    flex-direction: column;
+    text-align: center;
   }
 
   .navbar li {
-    display: block;
-    text-align: left;
-    width: 100%;
-  }
-
-  .navbar a {
-    padding: 12px 20px;
+    margin: 5px 0;
   }
 }
 
-/* Media Query para dispositivos móveis */
+/* Responsividade para telemóveis */
 @media (max-width: 480px) {
   .navbar a {
-    padding: 10px 15px;
+    padding: 12px;
+    font-size: 1rem;
   }
 }
