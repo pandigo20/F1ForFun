@@ -176,40 +176,39 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet/dist/leaflet.css" />
 
         <script>
-            const mapa = L.map("mapa-circuitos").setView([20, 0], 2);
-            L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png").addTo(mapa);
+    const mapa = L.map("mapa-circuitos").setView([20, 0], 2);
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png").addTo(mapa);
 
-            const circuitos = [
-                { nome: "GP da Austrália", coordenadas: [-37.8497, 144.9681], pais: "Austrália" },
-                { nome: "GP da França", coordenadas: [43.7904, 3.3185], pais: "França" },
-                { nome: "GP de Mónaco", coordenadas: [43.7333, 7.4167], pais: "Mónaco" },
-                { nome: "GP do Azerbaijão", coordenadas: [40.3958, 49.8671], pais: "Azerbaijão" },
-                { nome: "GP da Espanha", coordenadas: [41.5744, 2.2611], pais: "Espanha" },
-                { nome: "GP do Canadá", coordenadas: [45.5017, -73.5673], pais: "Canadá" },
-                { nome: "GP da Áustria", coordenadas: [47.2197, 15.6267], pais: "Áustria" },
-                { nome: "GP da Grã-Bretanha", coordenadas: [52.0730, -1.0150], pais: "Reino Unido" },
-                { nome: "GP da Alemanha", coordenadas: [49.3478, 8.5656], pais: "Alemanha" },
-                { nome: "GP da Hungria", coordenadas: [47.5810, 19.2480], pais: "Hungria" },
-                { nome: "GP da Bélgica", coordenadas: [50.4372, 5.9700], pais: "Bélgica" },
-                { nome: "GP da Itália", coordenadas: [45.6186, 9.2813], pais: "Itália" },
-                { nome: "GP da Holanda", coordenadas: [52.3794, 4.5400], pais: "Países Baixos" },
-                { nome: "GP de Singapura", coordenadas: [1.290270, 103.850060], pais: "Singapura" },
-                { nome: "GP do Japão", coordenadas: [34.8430, 136.5410], pais: "Japão" },
-                { nome: "GP dos Estados Unidos", coordenadas: [30.2345, -97.6302], pais: "Estados Unidos" },
-                { nome: "GP do México", coordenadas: [19.4043, -99.0554], pais: "México" },
-                { nome: "GP do Brasil", coordenadas: [-23.7035, -46.6997], pais: "Brasil" },
-                { nome: "GP de Abu Dhabi", coordenadas: [24.4675, 54.6030], pais: "Emirados Árabes Unidos" }
-                { nome: "GP do Bharein", coordenadas: [26.0325, 50.5106], pais: "Sakhir
-                                                                                Número de edições:20
-                                                                                Último vencedor:Max Verstappen" }
-            ];
+    const circuitos = [
+        { nome: "GP do Bahrein", coordenadas: [26.0325, 50.5106], pais: "Sakhir", info: "Número de edições: 20<br>Último vencedor: Max Verstappen (2024)" },
+        { nome: "GP da Arábia Saudita", coordenadas: [21.2854, 39.1460], pais: "Jeddah", info: "Número de edições: 4<br>Último vencedor: Max Verstappen (2024)" },
+        { nome: "GP da Austrália", coordenadas: [-37.8497, 144.9681], pais: "Melbourne", info: "Número de edições: 37<br>Último vencedor: Max Verstappen (2024)" },
+        { nome: "GP do Azerbaijão", coordenadas: [40.3958, 49.8671], pais: "Baku", info: "Número de edições: 8<br>Último vencedor: Max Verstappen (2024)" },
+        { nome: "GP de Miami", coordenadas: [25.9450, -80.1918], pais: "Miami", info: "Número de edições: 3<br>Último vencedor: Max Verstappen (2024)" },
+        { nome: "GP de Emilia-Romagna", coordenadas: [44.4956, 11.4500], pais: "Imola", info: "Número de edições: 32<br>Último vencedor: Max Verstappen (2024)" },
+        { nome: "GP de Mónaco", coordenadas: [43.7333, 7.4167], pais: "Monte Carlo", info: "Número de edições: 70<br>Último vencedor: Max Verstappen (2024)" },
+        { nome: "GP da Espanha", coordenadas: [41.5744, 2.2611], pais: "Barcelona", info: "Número de edições: 54<br>Último vencedor: Max Verstappen (2024)" },
+        { nome: "GP do Canadá", coordenadas: [45.5017, -73.5673], pais: "Montreal", info: "Número de edições: 53<br>Último vencedor: Max Verstappen (2024)" },
+        { nome: "GP da Áustria", coordenadas: [47.2197, 15.6267], pais: "Spielberg", info: "Número de edições: 37<br>Último vencedor: Max Verstappen (2024)" },
+        { nome: "GP da Grã-Bretanha", coordenadas: [52.0730, -1.0150], pais: "Silverstone", info: "Número de edições: 75<br>Último vencedor: Max Verstappen (2024)" },
+        { nome: "GP da Hungria", coordenadas: [47.5810, 19.2480], pais: "Budapeste", info: "Número de edições: 39<br>Último vencedor: Max Verstappen (2024)" },
+        { nome: "GP da Bélgica", coordenadas: [50.4372, 5.9700], pais: "Spa-Francorchamps", info: "Número de edições: 69<br>Último vencedor: Max Verstappen (2024)" },
+        { nome: "GP dos Países Baixos", coordenadas: [52.3794, 4.5400], pais: "Zandvoort", info: "Número de edições: 35<br>Último vencedor: Max Verstappen (2024)" },
+        { nome: "GP da Itália", coordenadas: [45.6186, 9.2813], pais: "Monza", info: "Número de edições: 75<br>Último vencedor: Max Verstappen (2024)" },
+        { nome: "GP de Singapura", coordenadas: [1.290270, 103.850060], pais: "Marina Bay", info: "Número de edições: 15<br>Último vencedor: Carlos Sainz (2024)" },
+        { nome: "GP do Japão", coordenadas: [34.8430, 136.5410], pais: "Suzuka", info: "Número de edições: 38<br>Último vencedor: Max Verstappen (2024)" },
+        { nome: "GP do Qatar", coordenadas: [25.3544, 51.2320], pais: "Lusail", info: "Número de edições: 3<br>Último vencedor: Max Verstappen (2024)" },
+        { nome: "GP dos EUA", coordenadas: [30.2345, -97.6302], pais: "Austin", info: "Número de edições: 45<br>Último vencedor: Max Verstappen (2024)" },
+        { nome: "GP de Abu Dhabi", coordenadas: [24.4675, 54.6030], pais: "Yas Marina", info: "Número de edições: 15<br>Último vencedor: Max Verstappen (2024)" }
+    ];
 
-            circuitos.forEach(circuito => {
-                L.marker(circuito.coordenadas)
-                    .addTo(mapa)
-                    .bindPopup(`<strong>${circuito.nome}</strong><br>${circuito.pais}`);
-            });
-        </script>
+    circuitos.forEach(circuito => {
+        L.marker(circuito.coordenadas)
+            .addTo(mapa)
+            .bindPopup(`<strong>${circuito.nome}</strong><br>${circuito.pais}<br>${circuito.info || ""}`);
+    });
+</script>
+
 
 
         <div id="rodape">
