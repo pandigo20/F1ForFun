@@ -60,3 +60,26 @@ header.navbar-header nav ul li a:hover,
 header.navbar-header nav ul li a.active {
     color: #e10600; /* Cor de destaque */
 }
+@media (max-width: 768px) {
+  .navbar ul {
+    padding: 0;
+    text-align: left;
+  }
+
+  .navbar li {
+    display: block;
+    text-align: left;
+    width: 100%;
+  }
+
+  .navbar a {
+    padding: 12px 20px;
+  }
+}
+
+/* Media Query para dispositivos móveis */
+@media (max-width: 480px) {
+  .navbar a {
+    padding: 10px 15px;
+  }
+}
