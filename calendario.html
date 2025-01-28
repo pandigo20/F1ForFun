@@ -203,13 +203,19 @@
     ];
 
     circuitos.forEach(circuito => {
+        // URL do Google Maps com as coordenadas
+        const googleMapsLink = `https://www.google.com/maps?q=${circuito.coordenadas[0]},${circuito.coordenadas[1]}`;
+
         L.marker(circuito.coordenadas)
             .addTo(mapa)
             .bindPopup(`
                 <strong>${circuito.nome}</strong><br>
                 ${circuito.pais}<br>
                 ${circuito.info || ""}<br>
-                <strong>Localização:</strong><br>Latitude: ${circuito.coordenadas[0]}<br>Longitude: ${circuito.coordenadas[1]}
+                <strong>Localização:</strong><br> 
+                Latitude: ${circuito.coordenadas[0]}<br> 
+                Longitude: ${circuito.coordenadas[1]}<br>
+                <a href="${googleMapsLink}" target="_blank">Ver no Google Maps</a>
             `);
     });
 </script>
