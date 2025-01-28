@@ -19,4 +19,4 @@ function carregarComponente(url, elementoId) {
 
 // Chamar as funções para carregar os componentes
 carregarComponente('Navbar.html', 'navbar');
-carregarComponente('rodape.html', 'rodape');
+carregarComponente('Rodape.html', 'rodape');
