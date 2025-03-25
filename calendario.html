@@ -6,64 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calendário - Fórmula 1</title>
     <link rel="stylesheet" href="Calendario.css">
+    <link rel="javascript" href="java_script_calendario.js">
     <script src="load_components.js" defer></script>
-    <style>
-        /* Estilos Responsivos */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        main {
-            padding: 20px;
-            max-width: 1200px;
-            width: 100%;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            overflow-x: auto;
-            display: block;
-        }
-
-        th, td {
-            padding: 10px;
-            border: 1px solid #ccc;
-        }
-
-        .sponsors {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        .sponsors img {
-            max-width: 100px;
-            height: auto;
-        }
-
-        @media (max-width: 768px) {
-            table {
-                display: block;
-                overflow-x: auto;
-            }
-
-            th, td {
-                font-size: 14px;
-                padding: 8px;
-            }
-        }
-    </style>
 </head>
 
 <body>
@@ -72,7 +16,7 @@
         <h1>Calendário de Corridas</h1>
         <div id="calendar-container">
             <h2>Calendário F1 2025</h2>
-            <table>
+            <table border="1" style="border-collapse: collapse; width: 100%; text-align: center;">
                 <thead>
                     <tr>
                         <th>Continente</th>
@@ -83,27 +27,149 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <!-- Oceânia -->
                     <tr>
-                        <td>Oceânia</td>
+                        <td rowspan="1">Oceânia</td>
                         <td>Grande Prémio da Austrália</td>
                         <td>Melbourne</td>
                         <td>14 de Março</td>
                         <td>16 de Março</td>
                     </tr>
+
+                    <!-- Ásia -->
                     <tr>
-                        <td>Ásia</td>
+                        <td rowspan="5">Ásia</td>
                         <td>Grande Prémio da China</td>
                         <td>Xangai</td>
                         <td>21 de Março</td>
                         <td>23 de Março</td>
                     </tr>
+                    <tr>
+                        <td>Grande Prémio do Japão</td>
+                        <td>Suzuka</td>
+                        <td>4 de Abril</td>
+                        <td>6 de Abril</td>
+                    </tr>
+                    <tr>
+                        <td>Grande Prémio do Azerbaijão</td>
+                        <td>Baku</td>
+                        <td>2 de Maio</td>
+                        <td>4 de Maio</td>
+                    </tr>
+                    <tr>
+                        <td>Grande Prémio da Arábia Saudita</td>
+                        <td>Jeddah</td>
+                        <td>16 de Maio</td>
+                        <td>18 de Maio</td>
+                    </tr>
+                    <tr>
+                        <td>Grande Prémio de Singapura</td>
+                        <td>Marina Bay</td>
+                        <td>5 de Setembro</td>
+                        <td>7 de Setembro</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Emirados Árabes Unidos</td>
+                        <td>Grande Prémio de Abu Dhabi</td>
+                        <td>Yas Marina</td>
+                        <td>13 de Novembro</td>
+                        <td>15 de Novembro</td>
+                    </tr>
+                    <tr>
+                        <td>Grande Prémio do Bahrein</td>
+                        <td>Sakhir</td>
+                        <td>1 de Março</td>
+                        <td>3 de Março</td>
+                    </tr>
+
+                    <!-- Europa -->
+
+                    <tr>
+                        <td rowspan="7">Europa</td>
+                        <td>Grande Prémio da Áustria</td>
+                        <td>Spielberg</td>
+                        <td>13 de Junho</td>
+                        <td>15 de Junho</td>
+                    </tr>
+                    <tr>
+                        <td>Grande Prémio do Mónaco</td>
+                        <td>Monte Carlo</td>
+                        <td>24 de Maio</td>
+                        <td>26 de Maio</td>
+                    </tr>
+                    <tr>
+                        <td>Grande Prémio do Reino Unido</td>
+                        <td>Silverstone</td>
+                        <td>27 de Junho</td>
+                        <td>29 de Junho</td>
+                    </tr>
+                    <tr>
+                        <td>Grande Prémio da Hungria</td>
+                        <td>Budapeste</td>
+                        <td>11 de Julho</td>
+                        <td>13 de Julho</td>
+                    </tr>
+                    <tr>
+                        <td>Grande Prémio da Bélgica</td>
+                        <td>Spa-Francorchamps</td>
+                        <td>25 de Julho</td>
+                        <td>27 de Julho</td>
+                    </tr>
+                    <tr>
+                        <td>Grande Prémio dos Países Baixos</td>
+                        <td>Zandvoort</td>
+                        <td>8 de Agosto</td>
+                        <td>10 de Agosto</td>
+                    </tr>
+                    <tr>
+                        <td>Grande Prémio de Itália</td>
+                        <td>Monza</td>
+                        <td>22 de Agosto</td>
+                        <td>24 de Agosto</td>
+                    </tr>
+
+                    <!-- América -->
+                    <tr>
+                        <td rowspan="5">América</td>
+                        <td>Grande Prémio de Miami</td>
+                        <td>Miami</td>
+                        <td>18 de Abril</td>
+                        <td>20 de Abril</td>
+                    </tr>
+                    <tr>
+                        <td>Grande Prémio do Canadá</td>
+                        <td>Montreal</td>
+                        <td>30 de Maio</td>
+                        <td>1 de Junho</td>
+                    </tr>
+                    <tr>
+                        <td>Grande Prémio do México</td>
+                        <td>Cidade do México</td>
+                        <td>3 de Outubro</td>
+                        <td>5 de Outubro</td>
+                    </tr>
+                    <tr>
+                        <td>Grande Prémio do Brasil</td>
+                        <td>São Paulo</td>
+                        <td>17 de Outubro</td>
+                        <td>19 de Outubro</td>
+                    </tr>
+                    <tr>
+                        <td>Grande Prémio de Las Vegas</td>
+                        <td>Las Vegas</td>
+                        <td>31 de Outubro</td>
+                        <td>2 de Novembro</td>
+                    </tr>
                 </tbody>
             </table>
         </div>
 
+
+
+
         <section id="mapa">
-            <h2>Mapa Interativo dos Circuitos</h2>
-            <div id="mapa-circuitos" style="height: 400px; width: 100%;"></div>
+                <h2>Mapa Interativo dos Circuitos</h2>
+                <div id="mapa-circuitos" style="height: 400px; width: 100%;"></div>
         </section>
 
         <script src="https://cdn.jsdelivr.net/npm/leaflet/dist/leaflet.js"></script>
@@ -112,11 +178,46 @@
         <script>
             const mapa = L.map("mapa-circuitos").setView([20, 0], 2);
             L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png").addTo(mapa);
-        </script>
-    </main>
 
-    <footer>
-        <p>&copy; 2025 F1ForFun. Todos os direitos reservados.</p>
-    </footer>
+            const circuitos = [
+        { nome: "GP do Bahrein", coordenadas: [26.0325, 50.5106], pais: "Sakhir", info: "Número de edições: 20<br>Último vencedor: Max Verstappen (2024)" },
+        { nome: "GP da Arábia Saudita", coordenadas: [21.2854, 39.1460], pais: "Jeddah", info: "Número de edições: 4<br>Último vencedor: Max Verstappen (2024)" },
+        { nome: "GP da Austrália", coordenadas: [-37.8497, 144.9681], pais: "Melbourne", info: "Número de edições: 37<br>Último vencedor: Max Verstappen (2024)" },
+        { nome: "GP do Azerbaijão", coordenadas: [40.3958, 49.8671], pais: "Baku", info: "Número de edições: 8<br>Último vencedor: Max Verstappen (2024)" },
+        { nome: "GP de Miami", coordenadas: [25.9450, -80.1918], pais: "Miami", info: "Número de edições: 3<br>Último vencedor: Max Verstappen (2024)" },
+        { nome: "GP de Emilia-Romagna", coordenadas: [44.4956, 11.4500], pais: "Imola", info: "Número de edições: 32<br>Último vencedor: Max Verstappen (2024)" },
+        { nome: "GP de Mónaco", coordenadas: [43.7333, 7.4167], pais: "Monte Carlo", info: "Número de edições: 70<br>Último vencedor: Max Verstappen (2024)" },
+        { nome: "GP da Espanha", coordenadas: [41.5744, 2.2611], pais: "Barcelona", info: "Número de edições: 54<br>Último vencedor: Max Verstappen (2024)" },
+        { nome: "GP do Canadá", coordenadas: [45.5017, -73.5673], pais: "Montreal", info: "Número de edições: 53<br>Último vencedor: Max Verstappen (2024)" },
+        { nome: "GP da Áustria", coordenadas: [47.2197, 15.6267], pais: "Spielberg", info: "Número de edições: 37<br>Último vencedor: Max Verstappen (2024)" },
+        { nome: "GP da Grã-Bretanha", coordenadas: [52.0730, -1.0150], pais: "Silverstone", info: "Número de edições: 75<br>Último vencedor: Max Verstappen (2024)" },
+        { nome: "GP da Hungria", coordenadas: [47.5810, 19.2480], pais: "Budapeste", info: "Número de edições: 39<br>Último vencedor: Max Verstappen (2024)" },
+        { nome: "GP da Bélgica", coordenadas: [50.4372, 5.9700], pais: "Spa-Francorchamps", info: "Número de edições: 69<br>Último vencedor: Max Verstappen (2024)" },
+        { nome: "GP dos Países Baixos", coordenadas: [52.3794, 4.5400], pais: "Zandvoort", info: "Número de edições: 35<br>Último vencedor: Max Verstappen (2024)" },
+        { nome: "GP da Itália", coordenadas: [45.6186, 9.2813], pais: "Monza", info: "Número de edições: 75<br>Último vencedor: Max Verstappen (2024)" },
+        { nome: "GP de Singapura", coordenadas: [1.290270, 103.850060], pais: "Marina Bay", info: "Número de edições: 15<br>Último vencedor: Carlos Sainz (2024)" },
+        { nome: "GP do Japão", coordenadas: [34.8430, 136.5410], pais: "Suzuka", info: "Número de edições: 38<br>Último vencedor: Max Verstappen (2024)" },
+        { nome: "GP do Qatar", coordenadas: [25.3544, 51.2320], pais: "Lusail", info: "Número de edições: 3<br>Último vencedor: Max Verstappen (2024)" },
+        { nome: "GP dos EUA", coordenadas: [30.2345, -97.6302], pais: "Austin", info: "Número de edições: 45<br>Último vencedor: Max Verstappen (2024)" },
+        { nome: "GP de Abu Dhabi", coordenadas: [24.4675, 54.6030], pais: "Yas Marina", info: "Número de edições: 15<br>Último vencedor: Max Verstappen (2024)" }
+    ];
+
+
+            circuitos.forEach(circuito => {
+                L.marker(circuito.coordenadas)
+                    .addTo(mapa)
+                    .bindPopup(`<strong>${circuito.nome}</strong><br>${circuito.pais}`);
+            });
+        </script>
+
+
+        <div id="rodape">
+            <footer>
+                <p>&copy; 2025 F1ForFun. Todos os direitos reservados.</p>
+            </footer>
+        </div>
+
+        <script src="java_script_calendario.js"></script>
 </body>
+
 </html>
